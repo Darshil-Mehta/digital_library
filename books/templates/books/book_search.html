@@ -1,0 +1,24 @@
+{% extends 'books/base.html' %}
+{% block content %}
+<div class="books_searched">
+    {% if searched %}
+        <h3>Here are the results for what you searched</h3>
+        {% if totalbooks < 1 %}
+            <h3 class="small text-muted">No such book found!</h3>
+        {% else %}
+            {% for book in books %}
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" style="height: 200px; padding: 3px;" src={{ book.image.url }} alt="Preview Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                        <p class="card-text">{{ book.author }}</p>
+                    <a href="{% url 'detail' book.id %}" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% else %}
+        <h1>You forgot to search for a book ...</h1>
+    {% endif %}
+</div>
+{% endblock content %}

@@ -7,7 +7,7 @@
         <h4>Branch : {{book.branch}}</h4>
         <img src={{book.image.url}} style="width:250px;height:250px">
         <p>Description : {{book.description}}</p>
-        <a href="{% url 'books' %}" class="btn btn-primary">Back</a>
+        <a href="{% url 'books' %}" class="btn btn-primary"> <- Back</a>
         <a href={{book.book_pdf.url}} class="btn btn-primary" target="_blank">Download PDF</a>
     </div>
 {% endblock content %}

@@ -1,5 +1,11 @@
 {% extends 'books/base.html' %}
 {% block content %}
-    <h4>idhar tera woh sab natak aayega</h4>
-    <a href="{% url 'books' %}">Books</a>
+<div class="home">
+    <h4>Welcome, {{user.first_name}} {{ user.last_name }}</h4>
+    <p>Here is your online digital platform to download books and read them!</p>
+    <p>Our only moto is that learning should not stop because of any reason!</p>
+    <button type="button" class="btn btn-primary btn-lg btn-block">
+        <a href="{% url 'books' %}" style="color: white; text-decoration: none;">Check out the books -></a>
+    </button>
+</div>
 {% endblock content %}
