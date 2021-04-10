@@ -4,7 +4,7 @@
     {% if searched %}
         <h3>Here are the results for what you searched</h3>
         {% if totalbooks < 1 %}
-            <h3 class="small text-muted">No such book found!</h3>
+            <h3 class="text-muted mt-2">No such book found!</h3>
         {% else %}
             {% for book in books %}
                 <div class="card" style="width: 18rem;">
